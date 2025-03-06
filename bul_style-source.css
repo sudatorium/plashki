@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    line-height: 0;
+    font-family: Russo One, monospace;
+    line-height: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1.5s, opacity 1.5s linear;
+}
+
+body.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+footer {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+	margin: 0 1%;
+    width: 4%;
+	height: auto;
+	/*overflow: hidden;*/
+    position: relative;
+    /*border-radius: 0px;*/
+	background-image: url("../content/icon/logo_left.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	top: 21%;
+    /*bottom: 0;*/
+    margin: auto 1;
+	/*тень под картинкой*/
+    /*box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -17px 0 15px -17px rgba(0, 0, 0, .8), 17px 0 15px -17px rgba(0, 0, 0, .8), 0 0 30px rgba(0, 0, 0, .1) inset, 0 2px 0 rgba(147, 10, 17, 1);*/
+	/*transition: margin-top 1.5s, box-shadow 1.5s;*/
+}
+.logo_border {
+	/*margin: 0 0.01%;*/
+    width: 0.5%;
+	height: auto;
+	overflow: hidden;
+    position: relative;
+    /*border-radius: 0px;*/
+	background-repeat: no-repeat;
+	background-size: contain;
+	top: 33%;
+    /*bottom: 0;*/
+    margin: auto 1;
+	/*тень под картинкой*/
+    /*box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -17px 0 15px -17px rgba(0, 0, 0, .8), 17px 0 15px -17px rgba(0, 0, 0, .8), 0 0 30px rgba(0, 0, 0, .1) inset, 0 2px 0 rgba(147, 10, 17, 1);*/
+	/*transition: margin-top 1.5s, box-shadow 1.5s;*/
+}
+
+
+/*.player {
+    /*margin: 0 0.051%;*/
+   /* width: 175px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0px;
+    /*box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -17px 0 15px -17px rgba(0, 0, 0, .8), 17px 0 15px -17px rgba(0, 0, 0, .8), 0 0 30px rgba(0, 0, 0, .1) inset, 0 2px 0 rgba(147, 10, 17, 1);*/
+    /*transition: margin-top 1.5s, box-shadow 1.5s;
+    background-image: url("../content/back.png");
+    background-size: cover;
+}*/
+.player {
+	/*межрамочное растояние*/
+    margin: 0 0.51%;
+    width: 8%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1px;
+	background-image: url("../content/back.png");
+	background-size: cover;
+	/*тень под картинкой*/
+    /*box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -17px 0 15px -17px rgba(0, 0, 0, .8), 17px 0 15px -17px rgba(0, 0, 0, .8), 0 0 30px rgba(0, 0, 0, .1) inset, 0 2px 0 rgba(147, 10, 17, 1);*/
+    transition: margin-top 1.5s, box-shadow 1.5s;
+
+}
+
+.speaker {
+    box-shadow: 0 2px 15px rgba(85, 153, 255, 0.9), 0 2px 7px rgba(17, 0, 255, 0.527);
+}
+
+.player.dead {
+    margin-top: 1.5%;
+}
+
+.background {
+ 	position: absolute;
+	height: 215px;
+    width: 165px;
+    left: 1px;
+	/* отступ по высоте*/
+    /*bottom: 0px;*/
+	/*background-image: url("../content/icon/frame.png");*/
+    background-repeat: no-repeat;
+    background-position: top;
+	background-position: center;
+	background-size: cover;
+	/*тень на картинку*/
+	/*box-shadow: 0px -70px 25px -40px rgba(0, 0, 0, 0.8) inset, 0px -100px 50px -40px rgba(0, 0, 0, 0.5) inset;*/
+    transition: all 1s;
+}
+.mafia .background {
+    background-image: url("../content/icon/01frame.png");
+	
+}
+
+.don .background {
+    background-image: url("../content/icon/01frame.png");
+	
+}
+
+.photo {
+	position: absolute;
+	height: 85%;
+    width: 154px;
+	left: 4px;
+	background-image: url("../content/photo/alpha/Double_Pink-Photoroom.png");
+	margin: auto;
+    background-repeat: no-repeat;
+    /*background-position: top;*/
+	background-size: cover;
+	/*тень на картинку*/
+	box-shadow: 0px -70px 25px -40px rgba(0, 0, 0, 0.5) inset, 0px -10px 50px -40px rgba(0, 0, 0, 1) inset;
+    transition: all 1s;
+}
+
+.dead .photo {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+	
+}
+
+/*Если решим затемнять бэкграунд под фотографиями убитых*/
+.dead .background {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+	
+}
+
+.don .number {
+	 -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+   
+}
+
+.don .nick {
+	 -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+   
+}
+
+.mafia .number {
+	 -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+   
+}
+
+.mafia .nick {
+	 -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+   
+}
+
+/*конец покраски черных карт*/
+
+
+
+.status {
+	/*Статус с отступами справа*/
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    /*проявление ролей слева*/
+	visibility: hidden;
+    opacity: 0;
+	background-image: url("../content/icon/icon_clean.png");
+	background-repeat: no-repeat;
+	background-size: contain;	
+    transition: visibility 1.5s, opacity 1.5s linear;
+}
+
+
+
+
+.dead .status {
+    visibility: visible;
+    opacity: 1;
+	background-image: url("../content/icon/icon_otstrel.png");
+    /* цвет кружков под иконками*/
+	/*background-color: rgba(255, 255, 255, 0.8);*/
+	filter: grayscale(1);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+	
+}
+
+.killed .status {
+    background-image: url("../content/icon/icon_otstrel.png");
+}
+
+.voted .status {
+    background-image: url("../content/icon/icon_golos.png");
+}
+
+.deleted .status {
+    background-image: url("../content/icon/deleted.png");
+}
+
+.role {
+    height: 45px;
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border-radius: 0%;
+	background-image: url("../content/icon/icon_chern.png");
+	background-repeat: no-repeat;
+	background-size: contain;	
+    background-position: top;
+    /*проявление ролей справа*/
+	visibility: hidden;
+    opacity: 0;
+    transition: visibility 1.5s, opacity 1.5s linear;
+}
+
+.show-roles .sheriff .role {
+    visibility: visible;
+    opacity: 1;
+    /*background-color: rgba(147, 10, 17, 0.8);*/
+    background-image: url("../content/icon/icon_sher.png");
+}
+
+
+
+.show-roles .don .role {
+    visibility: visible;
+    opacity: 1;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    background-image: url("../content/icon/icon_don.png");
+}
+
+
+.show-roles .mafia .role {
+    visibility: visible;
+    opacity: 1;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    background-image: url("../content/icon/icon_chern.png");
+}
+
+.number {
+    position: absolute;
+	left: -1px;
+	/*right: 0;*/
+	margin-inline: auto;
+	bottom: 0px;
+    width: 36px;
+    height: 30px;
+	line-height: 30px;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: bold;
+	background-image: url("../content/icon/red_number.png");
+	background-size: 100%;
+	/*font-weight: 800;*/
+    /*line-height: 15px;*/
+	
+	transition:all 1s, background-color 1.5s, border 1.5s;
+	
+}
+
+.show-roles .mafia .number,
+.show-roles .don .number {
+    background-color: #000;
+    color: #fff;
+    border: 0px solid white;
+}
+
+@font-face {
+	font-family: DinCyBd; 
+	src: url("../static/DinCyBd.ttf"); 
+}
+
+.nick {
+	font-family: DinCyBd;
+	
+	font-size: 18px;
+	position: absolute;
+	width: 180px;
+    height: 30px;
+    background-image: url("../content/icon/plashka_r.png");
+	background-size: 100%;
+    color: #fff;
+	/*margin: auto;*/
+	/*left: 0px;
+	right: 0;
+	line-height: 30px;
+	text-align: 100px;
+	padding-left:40px;
+	letter-spacing: 0px;
+    /*margin-left: 100px;*/
+	/*text-align: center;*/
+	/*vertical-align:text-top;*/
+	/*text-transform: uppercase;*/
+    /*left: 0px;*/
+	/* отступ по высоте*/
+    bottom: 0px;
+}
